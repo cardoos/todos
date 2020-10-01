@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todoList</title>
+</head>
+<body>
+  <p>This is a p tag. lol</p>
+  <script>
+    'use strict'
+    let todoList = {
+    todos: [],
+    displayTodos : function(){
+    console.log('My Todos', this.todos);
+      
+    },
+    addTodo : function(todoText){
+      this.todos.push({
+        todoText : todoText,
+        completed : false
+      });
+      this.displayTodos();
+    },
+    changeTodo : function(position , newValue){
+      this.todos[position] = newValue;
+      this.displayTodos();
+    },
+    deleteTodo : function(position){
+      this.todos.splice(position , 1);
+      this.displayTodos();
+    },
+    };
+    
+    
+    </script>
+  
+</body>
+</html>
